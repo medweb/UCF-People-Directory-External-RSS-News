@@ -125,7 +125,7 @@ function get_rss_feed($post_id) {
 			?>
 			<div class="row" >
 				<div class="col-lg" >
-					<h2 class="person-subheading mt-5" >In The External News</h2 >
+					<h2 class="person-subheading mt-5" >News from the College</h2 >
 					<?=$external_news_html?>
 				</div >
 			</div >
@@ -166,7 +166,7 @@ function get_person_external_markup( $news_posts ) {
 						</a >
 					</h3 >
 					<div >
-						<?php echo $external_post['piece']; ?>
+						<?php //echo $external_post['piece']; ?>
 					</div >
 				</li >
 			<?php endforeach; ?>
