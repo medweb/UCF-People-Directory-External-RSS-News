@@ -45,7 +45,9 @@ function get_acf_feed_url($post_id) {
     if ($use_com_news) {
         // default true. pull in news from COM rss feed
         $person_tag = get_post_meta($post_id, acf_pro_fields\group_container . '_' . acf_pro_fields\group_com_tag, true);
-        $news_feed_url = "https://med.ucf.edu/feed/?post_type=news&tag={$person_tag}";
+	    //$news_feed_url = "https://med.ucf.edu/feed/?post_type=news&tag={$person_tag}";
+	    $news_feed_url = "https://med.ucf.edu/feed/?post_type=news&post_associated_people={$person_tag}"; // post_associated_people is defined in the college theme. child theme then adds rss parameter
+
     } else {
         // editor defined a specific RSS feed to pull articles from
         $news_feed_url = get_post_meta($post_id, acf_pro_fields\group_container . '_' . acf_pro_fields\group_external_rss, true);

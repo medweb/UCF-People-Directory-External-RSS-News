@@ -29,7 +29,7 @@ function create_fields() {
 					array(
 						'key'               => 'field_618176b60056c',
 						'label'             => 'Include news listings from an external site',
-						'name'              => 'include_news_listings_from_an_external_site',
+						'name'              => enable_external,
 						'type'              => 'true_false',
 						'instructions'      => '',
 						'required'          => 0,
@@ -48,7 +48,7 @@ function create_fields() {
 					array(
 						'key'               => 'field_6181770e0056d',
 						'label'             => 'External news options',
-						'name'              => 'external_news_options',
+						'name'              => group_container,
 						'type'              => 'group',
 						'instructions'      => '',
 						'required'          => 0,
@@ -71,7 +71,7 @@ function create_fields() {
 							array(
 								'key'               => 'field_6181777e0056f',
 								'label'             => 'Pull news from College of Medicine',
-								'name'              => 'pull_news_from_college_of_medicine',
+								'name'              => group_use_com,
 								'type'              => 'true_false',
 								'instructions'      => '',
 								'required'          => 0,
@@ -89,10 +89,10 @@ function create_fields() {
 							),
 							array(
 								'key'               => 'field_618177d000570',
-								'label'             => 'News Tag/Slug',
-								'name'              => 'news_tag_slug',
+								'label'             => 'Person ID or URL Slug from COM site',
+								'name'              => group_com_tag,
 								'type'              => 'text',
-								'instructions'      => 'Specify the Tag that references this Person in articles on COM. For example, the Tag for Abdo Asmar is "abdo-asmar"',
+								'instructions'      => 'Specify the Person ID or the Person Slug from the COM site that matches the person here. For example, the COM Person ID for Abdo Asmar is "375", and the COM URL Slug is "abdo-asmar-m-d"',
 								'required'          => 1,
 								'conditional_logic' => array(
 									array(
@@ -109,7 +109,7 @@ function create_fields() {
 									'id'    => '',
 								),
 								'default_value'     => '',
-								'placeholder'       => 'abdo-asmar',
+								'placeholder'       => '375 OR abdo-asmar-m-d',
 								'prepend'           => '',
 								'append'            => '',
 								'maxlength'         => '',
@@ -117,7 +117,7 @@ function create_fields() {
 							array(
 								'key'               => 'field_6181784000571',
 								'label'             => 'Alternative RSS Feed',
-								'name'              => 'alternative_rss_feed',
+								'name'              => group_external_rss,
 								'type'              => 'url',
 								'instructions'      => 'Specify the full url for an RSS feed to pull in articles from an external site.',
 								'required'          => 1,
@@ -136,12 +136,12 @@ function create_fields() {
 									'id'    => '',
 								),
 								'default_value'     => '',
-								'placeholder'       => 'https://med.ucf.edu/feed/?post_type=news&tag=abdo-asmar',
+								'placeholder'       => 'https://med.ucf.edu/feed/?post_type=news&post_associated_people=abdo-asmar-m-d',
 							),
 							array(
 								'key'               => 'field_6181788600572',
 								'label'             => 'Max Articles to Show',
-								'name'              => 'max_articles_to_show',
+								'name'              => group_max_articles,
 								'type'              => 'range',
 								'instructions'      => 'Maximum number of external articles to show on the profile. Choose a number between 1 and 10. The most recent articles will be shown first.',
 								'required'          => 0,
