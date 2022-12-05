@@ -21,6 +21,8 @@
  * Version Rev. 1.9.1 (291)
  */
 
+namespace ucf_people_directory_external_rss_news\simple_html_dom;
+
 defined( 'HDOM_TYPE_ELEMENT') || define( 'HDOM_TYPE_ELEMENT', 1 );
 defined( 'HDOM_TYPE_COMMENT') || define( 'HDOM_TYPE_COMMENT', 2 );
 defined( 'HDOM_TYPE_TEXT') || define( 'HDOM_TYPE_TEXT', 3 );
