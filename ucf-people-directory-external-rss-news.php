@@ -2,7 +2,7 @@
 /*
 Plugin Name: UCF People Directory - External RSS News
 Description: Modifies single-person from the theme to bring in news posted on another WordPress site, based on a user-defined slug for each profile.
-Version: 1.3.1
+Version: 1.4.0
 Author: Stephen Schrauger
 Plugin URI: https://github.com/medweb/UCF-People-Directory-External-RSS-News
 Github Plugin URI: medweb/UCF-People-Directory-External-RSS-News
@@ -66,4 +66,3 @@ function deactivation() {
 register_uninstall_hook( __FILE__, __NAMESPACE__ . '\\deactivation' );
 function uninstall() {
 }
-

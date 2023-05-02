@@ -89,7 +89,7 @@ function get_rss_feed($post_id) {
 			$image     = $htmlDOM->find( 'img', 0 );
 			if ($image) {
                 $image_url = $image->src;
-                
+
                 // remove images for description
                 $image->outertext = '';
                 $htmlDOM->save();
