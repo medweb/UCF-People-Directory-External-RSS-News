@@ -88,13 +88,15 @@ function get_rss_feed($post_id) {
 
 			$image     = $htmlDOM->find( 'img', 0 );
 			if ($image) {
-				$image_url = $image->src;
+                $image_url = $image->src;
+                
+                // remove images for description
+                $image->outertext = '';
+                $htmlDOM->save();
 			} else {
 				$image_url = 'https://ucfhealth.com/wp-content/themes/ucf-health-theme/images/logos/ucf-building.jpg'; // default stock image if image not set
             }
-			// remove images for description
-			$image->outertext = '';
-			$htmlDOM->save();
+
 
 			$content_minus_image = wp_trim_words( $htmlDOM, '25', '...' ); // these functions are defined in functions.php
 
